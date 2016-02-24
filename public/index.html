@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="common.js"></script>
+    <style>
+        .clickable {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        td {
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body onload="initialize()">
+<table>
+        <tr>
+            <td>
+                <div id="searchArea">
+                    <input id="fromDate" type="text"/>
+                    <input id="toDate" type="text"/>
+                    <div id="searchButton" class="clickable">Collect statistics</div>
+                </div>
+            </td>
+            <td>
+                <div>tasks are here</div>
+                <div id="tasks"></div>
+            </td>
+            <td>
+                <div>Results:</div>
+                <div id="results"></div>
+            </td>
+            <td>
+                <div>Authorize as user</div>
+                <input type="text" id="userId"/>
+                <div id="loginButton" class="clickable">Login</div>
+                <div>Current user:</div>
+                <div id="currentUser"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
