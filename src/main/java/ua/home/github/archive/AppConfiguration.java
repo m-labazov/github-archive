@@ -1,7 +1,9 @@
 package ua.home.github.archive;
 
-import com.mongodb.*;
-import org.apache.tomcat.util.threads.ThreadPoolExecutor;
+
+import com.mongodb.DB;
+import com.mongodb.MongoClient;
+import com.mongodb.ServerAddress;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,8 +11,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.Executor;
 
-@org.springframework.context.annotation.Configuration
-public class Configuration {
+@Configuration
+public class AppConfiguration {
     @Value("${spring.data.mongodb.host}")
     private String host;
     @Value("${spring.data.mongodb.port}")
